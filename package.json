@@ -1,0 +1,99 @@
+{
+  "name": "web-santacc",
+  "description": "Web Santa Compañía Creativa",
+  "version": "1.0.0",
+  "author": "Miguel Calderón <miguel.calderon@gmail.com>",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "caniuse-db": "^1.0.30000764",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-config-standard-react": "^5.0.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.4.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "gatsby": "^1.9.130",
+    "gatsby-image": "^1.0.24",
+    "gatsby-link": "^1.6.27",
+    "gatsby-module-loader": "^1.0.9",
+    "gatsby-plugin-catch-links": "^1.0.9",
+    "gatsby-plugin-google-analytics": "^1.0.12",
+    "gatsby-plugin-manifest": "^1.0.8",
+    "gatsby-plugin-nprogress": "^1.0.7",
+    "gatsby-plugin-offline": "^1.0.12",
+    "gatsby-plugin-preact": "^1.0.12",
+    "gatsby-plugin-react-helmet": "^1.0.8",
+    "gatsby-plugin-sass": "^1.0.13",
+    "gatsby-plugin-sharp": "^1.6.21",
+    "gatsby-plugin-sitemap": "^1.2.5",
+    "gatsby-plugin-styled-components": "^2.0.2",
+    "gatsby-source-wordpress": "^2.0.36",
+    "gatsby-transformer-documentationjs": "^1.4.6",
+    "gatsby-transformer-sharp": "^1.6.14",
+    "graphql-code-generator": "^0.8.14",
+    "lodash": "^4.17.4",
+    "prismjs": "^1.8.4",
+    "prop-types": "^15.6.0",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-document-title": "^2.0.3",
+    "react-google-maps": "^9.2.2",
+    "slash": "^1.0.0",
+    "styled-components": "^2.2.3"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:snapshotclean": "jest -u",
+    "graphql": "gql-gen --url http://localhost:8000/___graphql --template typescript --out ./graphql-types.d.ts",
+    "doc": "node doc"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "^21.2.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "enzyme": "^3.1.1",
+    "enzyme-adapter-react-15": "^1.0.5",
+    "enzyme-to-json": "^3.2.2",
+    "eslint": "^3.19.0",
+    "eslint-plugin-jest": "^21.3.2",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^21.2.1",
+    "jest-image-snapshot": "^2.2.0",
+    "jest-styled-components": "^4.9.0",
+    "prettier": "^1.8.2",
+    "puppeteer": "^0.13.0",
+    "react-styleguidist": "^6.0.33",
+    "react-test-renderer": "^15.6.2"
+  },
+  "jest": {
+    "setupFiles": [
+      "./test/jestsetup.js"
+    ],
+    "setupTestFrameworkScriptFile": "./test/jestsetuptestframework.js",
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "moduleNameMapper": {
+      "^.+\\.(css|scss)$": "identity-obj-proxy",
+      "^.+\\.(jpg|png)$": "identity-obj-proxy"
+    },
+    "collectCoverageFrom": [
+      "**/src/**/*.{js,jsx}"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ]
+  }
+}

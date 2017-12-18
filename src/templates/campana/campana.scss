@@ -1,0 +1,82 @@
+.material {
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+}
+
+.materiales {
+  max-width: 1255px;
+  width: auto;
+  max-height: calc(100vh - 450px);
+  height: 100%;
+  cursor: pointer;
+}
+
+.material_item {
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 1px solid #dfdfdf;
+  display: inline-block;
+  padding: 0;
+  vertical-align: top;
+  text-align: center;
+  /*
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity .5s ease-in;
+  */
+}
+
+.fdin {
+  opacity: 1;
+  z-index: 1
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.contenedorMateriales {
+  position: relative;
+  width: calc(100% - 120px - 2rem);
+  margin: 0 auto;
+}
+
+.material-enter {
+  opacity: 0.01;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.material-enter.material-enter-active {
+  position: relative;
+  transition: opacity .4s ease-in;
+  opacity: 1;
+}
+
+.material-leave {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.material-leave.material-leave-active {
+  transition: opacity .5s ease-in;
+  opacity: 0.01;
+}

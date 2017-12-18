@@ -1,0 +1,29 @@
+.contenedorFlechas {
+  margin-top: 72px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin-bottom: calc(54px + 6em);
+  .material_flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5%;
+    max-width: 63px;
+    min-width: 60px;
+    cursor: pointer;
+    z-index: 2;
+    &.flecha_iz img, &.flecha_de img {
+      width: 100%;
+      max-width: 63px;
+    }
+    &.flecha_iz {
+      left: 0.5rem;
+    }
+    &.flecha_de {
+      right: 0.5rem;
+    }
+  }
+}

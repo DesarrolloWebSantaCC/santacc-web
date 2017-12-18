@@ -1,0 +1,53 @@
+.page_contacto {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  & > div {
+    display: inline-block;
+    font-size: 0.9rem;
+    line-height: 1.25;
+  }
+  .contenidos_contacto_texto {
+    min-width: 256px;
+    width: 47%;
+    max-height: 457px;
+    box-sizing: border-box;
+    vertical-align: top;
+    position: relative;
+    p {
+      color: #808285;
+      margin-top: 0;
+      .contenidos_contacto_texto_titulo {
+        color: #000;
+      }
+      a {
+        color: #000;
+        text-decoration: none;
+      }
+      &.contenidos_contacto_texto_metro {
+        color: #000;
+        background-image: url(../../images/metro.jpg);
+        background-repeat: no-repeat;
+        background-position: center left;
+        padding-left: 51px;
+        background-size: contain;
+      }
+    }
+    @media (max-width: 641px) {
+      & {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+  .contenidos_contacto_mapa {
+    width: 52%;
+    height: 100%;
+    @media (max-width: 641px) {
+      & {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+}

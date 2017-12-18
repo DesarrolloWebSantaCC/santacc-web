@@ -1,0 +1,33 @@
+[
+  {
+    "stylers": [
+      {
+        "hue": "#808080"
+      },
+      {
+        "saturation": -100
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "lightness": 100
+      },
+      {
+        "visibility": "simplified"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "labels",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  }
+]

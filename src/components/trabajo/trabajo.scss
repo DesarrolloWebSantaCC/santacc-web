@@ -1,0 +1,105 @@
+.trabajo {
+  position: relative;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  width: 47.9%;
+  display: inline-block;
+  zoom: 1;
+  text-align: left;
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
+  &:nth-child(even) {
+    margin-right: 0;
+  }
+  &:nth-child(odd):nth-last-child(1) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  img {
+    width: 100%;
+    vertical-align: text-bottom;
+  }
+  .velo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(39, 218, 243);
+    opacity: .8;
+    cursor: pointer;
+  }
+  .capa_trabajos {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+      transition: all .2s ease-in-out;
+    }
+  }
+  .posicion_textos {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    box-sizing: border-box;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .cliente {
+    color: #fff;
+    font-size: 2.9rem;
+    font-weight: bold;
+    font-family: oswald,Arial,Helvetica,sans-serif,sans;
+    border-bottom: 2px solid #fff;
+    text-transform: uppercase;
+    padding-bottom: 0.2rem;
+    line-height: 0.9;
+  }
+  .tipo {
+    color: #000;
+    font-size: 1.6rem;
+    font-family: oswald,Arial,Helvetica,sans-serif,sans;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
+  }
+  .tipo_caracteristicas {
+    font-style: italic;
+    font-size: 0.65rem;
+    line-height: 1;
+    color: #fff;
+    font-family: oswald, Arial, Helvetica, sans-serif, sans;
+    text-transform: uppercase;
+    &::after {
+      content: ' ver más';
+      color: #000;
+      font-weight: bold;
+      padding-left: 0.25rem;
+      text-transform: none;
+    }
+  }
+  @media (max-width: 641px) {
+    & {
+      width: 47.8%;
+    }
+  }
+  @media (max-width: 481px) {
+    & {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.nicework {
+  font-family:oswald,Helvetica,Arial,sans-serif,sans;
+  font-weight:bold;
+  color:#000;
+  font-size:1.2rem;
+  position:absolute;
+  right:0;
+  top: 50%;
+  transform: translateY(-50%);
+  span {
+    font-family:oswald,Helvetica,Arial,sans-serif,sans;
+    color:rgb(39, 218, 243);
+    font-size: 1.5rem;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+  @media (max-width: 481px) {
+    & {
+      position: relative;
+      top: 0;
+      transform: none;
+      padding-top: 1rem;
+    }
+  }
+}
