@@ -49,12 +49,8 @@ testIf(`Mostrar el HTML del componente MaterialFlechas,
     <MaterialFlechas current={1} total={3} showMaterial={mockedShowMaterial} />
   )
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper.find('.flecha_de').get(0)).toBeTruthy()
-  expect(wrapper.find('.flecha_iz').get(0)).toBeTruthy()
   wrapper.find('.flecha_de').simulate('click')
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper.find('.flecha_de').get(0)).toBeFalsy()
-  expect(wrapper.find('.flecha_iz').get(0)).toBeTruthy()
 })
 testIf(`Mostrar el HTML del componente MaterialFlechas, 
     tercer material, tres materiales en total, 
@@ -64,12 +60,35 @@ testIf(`Mostrar el HTML del componente MaterialFlechas,
     <MaterialFlechas current={2} total={3} showMaterial={mockedShowMaterial} />
   )
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper.find('.flecha_iz').get(0)).toBeTruthy()
   wrapper.find('.flecha_iz').simulate('click')
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper.find('.flecha_iz').get(0)).toBeTruthy()
   wrapper.find('.flecha_iz').simulate('click')
   expect(wrapper).toMatchSnapshot()
+})
+it(`MaterialFlechas, 
+    segundo material, tres materiales en total, 
+    cambiar al tercer material`, () => {
+  const mockedShowMaterial = () => {}
+  const wrapper = shallow(
+    <MaterialFlechas current={1} total={3} showMaterial={mockedShowMaterial} />
+  )
+  expect(wrapper.find('.flecha_de').get(0)).toBeTruthy()
+  expect(wrapper.find('.flecha_iz').get(0)).toBeTruthy()
+  wrapper.find('.flecha_de').simulate('click')
+  expect(wrapper.find('.flecha_de').get(0)).toBeFalsy()
+  expect(wrapper.find('.flecha_iz').get(0)).toBeTruthy()
+})
+it(`MaterialFlechas, 
+    tercer material, tres materiales en total, 
+    cambiar al primer material`, () => {
+  const mockedShowMaterial = () => {}
+  const wrapper = shallow(
+    <MaterialFlechas current={2} total={3} showMaterial={mockedShowMaterial} />
+  )
+  expect(wrapper.find('.flecha_iz').get(0)).toBeTruthy()
+  wrapper.find('.flecha_iz').simulate('click')
+  expect(wrapper.find('.flecha_iz').get(0)).toBeTruthy()
+  wrapper.find('.flecha_iz').simulate('click')
   expect(wrapper.find('.flecha_de').get(0)).toBeTruthy()
   expect(wrapper.find('.flecha_iz').get(0)).toBeFalsy()
 })

@@ -40,8 +40,8 @@ function caught (err) {
 describe('Sección Contacto', () => {
   testIf('[Snapshot] Contacto', async done => {
     expect.assertions(1)
-    await page.goto(APP, { waitUntil: [ 'load', 'networkidle2' ] })
-    const screenshot = await page.screenshot({ fullPage: true })
+    await page.goto(APP, { waitUntil: [ 'load', 'networkidle2' ] }).catch(caught)
+    const screenshot = await page.screenshot({ fullPage: true }).catch(caught)
     expect(screenshot).toMatchImageSnapshot()
     done()
   }, 30000)
