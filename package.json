@@ -56,6 +56,7 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "test:snapshotclean": "jest -u",
+    "test:skipsnapshots": "env MODE=skipsnapshots jest",
     "graphql": "gql-gen --url http://localhost:8000/___graphql --template typescript --out ./graphql-types.d.ts",
     "doc": "node doc"
   },
