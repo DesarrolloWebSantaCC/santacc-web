@@ -7,7 +7,7 @@ install:
   - npm install
   - gatsby develop
   - npm run test:snapshotclean
-script: bundle exec gatsby build
+  - gatsby build
 cache:
   directories:
     - "node_modules"
