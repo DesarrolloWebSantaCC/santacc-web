@@ -1,0 +1,12 @@
+dist: trusty
+language: node_js
+node_js:
+  - "8"
+install:
+  - npm install -g gatsby-cli@1.1.27`
+  - npm install
+  - npm run test
+script: bundle exec gatsby build
+cache:
+  directories:
+    - "node_modules"
