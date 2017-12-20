@@ -1,0 +1,8 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.10.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:call:20160705':
+    - gatsby > hapi > call:
+        patched: '2017-12-20T15:58:02.161Z'
