@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/DesarrolloWebSantaCC/santacc-web/badge.svg)](https://coveralls.io/github/DesarrolloWebSantaCC/santacc-web)
+
 # Web Santa Compañía Creativa
 
 Santa Compañía Creativa's website. Created with GatsbyJS from gatsby-starter-default: https://www.gatsbyjs.org/
