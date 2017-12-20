@@ -84,7 +84,7 @@ describe('Sección trabajos', () => {
     await page.goto(APP).catch(caught)
     await page.waitForSelector('.trabajo').catch(caught)
     await page.hover('.trabajo:first-child .capa_trabajos').catch(caught)
-    await page.waitFor(800).catch(caught)
+    await page.waitFor(2000).catch(caught)
     const screenshot = await page.screenshot({ fullPage: true }).catch(caught)
     expect(screenshot).toMatchImageSnapshot()
     done()

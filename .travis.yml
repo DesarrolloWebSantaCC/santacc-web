@@ -10,6 +10,7 @@ install:
   - while ! nc -z localhost 9000 </dev/null; do sleep 3; done
 script:
   - npm run test:skipsnapshots
+after_success:
   - npm run test:coverage
 cache:
   directories:
