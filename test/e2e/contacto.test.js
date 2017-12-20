@@ -2,7 +2,7 @@ import puppeteer from 'puppeteer'
 import { toMatchImageSnapshot } from 'jest-image-snapshot'
 expect.extend({ toMatchImageSnapshot })
 
-const APP = 'http://localhost:8000/contacto/'
+const APP = 'http://localhost:9000/contacto/'
 
 let page
 let browser

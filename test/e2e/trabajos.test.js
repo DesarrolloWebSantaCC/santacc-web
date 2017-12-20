@@ -2,7 +2,7 @@ import puppeteer from 'puppeteer'
 import { toMatchImageSnapshot } from 'jest-image-snapshot'
 expect.extend({ toMatchImageSnapshot })
 
-const APP = 'http://localhost:8000'
+const APP = 'http://localhost:9000'
 
 let page
 let browser
@@ -60,7 +60,7 @@ describe('Sección trabajos', () => {
       .then(async () => {
         expect(await page.evaluate(() => (
           window.location.href
-        ))).toBe('http://localhost:8000/trabajos/addalia')
+        ))).toBe('http://localhost:9000/trabajos/addalia')
         done()
       })
       .catch(caught)

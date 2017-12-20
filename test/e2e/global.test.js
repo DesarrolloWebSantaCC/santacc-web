@@ -1,6 +1,6 @@
 import puppeteer from 'puppeteer'
 
-const APP = 'http://localhost:8000/'
+const APP = 'http://localhost:9000/'
 
 function calcUnusedCssPercentage (stylesheets, ruleUsage) {
   let usedLength = 0
