@@ -9,7 +9,7 @@ install:
   - nohup gatsby serve & > /dev/null &
   - while ! nc -z localhost 9000 </dev/null; do sleep 3; done
 script:
-  - npm run test:snapshotclean
+  - env MODE=skipsnapshots npm run test:snapshotclean
 cache:
   directories:
     - "node_modules"

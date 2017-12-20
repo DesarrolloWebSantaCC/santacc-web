@@ -9,6 +9,8 @@ let browser
 const width = 1280
 const height = 980
 
+const testIf = process.env.MODE && process.env.MODE === 'skipsnapshots' ? test.skip : test
+
 beforeAll(async () => {
   window.jasmine.DEFAULT_TIMEOUT_INTERVAL = 15000;
   browser = await puppeteer.launch({
@@ -81,7 +83,7 @@ describe('Sección trabajos', () => {
       })
       .catch(caught)
   }, 20000)
-  test('[Snapshot] trabajos', async done => {
+  testIf('[Snapshot] trabajos', async done => {
     expect.assertions(1)
     await page.goto(APP)
     await page.waitFor(1000)
@@ -92,7 +94,7 @@ describe('Sección trabajos', () => {
       })
       .catch(caught)
   }, 30000)
-  test('[Snapshot] trabajos hover', async done => {
+  testIf('[Snapshot] trabajos hover', async done => {
     // await page.goto(APP)
     expect.assertions(1)
     await page.waitForSelector('.trabajo')

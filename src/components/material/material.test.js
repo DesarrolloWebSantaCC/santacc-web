@@ -8,7 +8,9 @@ Enzyme.configure({ adapter: new Adapter() })
 const vimeoURL = 'https://vimeo.com/53331803'
 const youtubeURL = 'https://www.youtube.com/watch?v=BGqFuwVVUS0'
 
-it('Mostrar el HTML del componente Material, con web.', () => {
+const testIf = process.env.MODE && process.env.MODE === 'skipsnapshots' ? test.skip : test
+
+testIf('Mostrar el HTML del componente Material, con web.', () => {
   const mockedURL = 'https://santacc.es'
   const mockedMaterial = {
     pieza: {
@@ -33,7 +35,8 @@ it('Mostrar el HTML del componente Material, con web.', () => {
   )
   expect(wrapper).toMatchSnapshot()
 })
-it('Mostrar el HTML del componente Material, con imagen.', () => {
+
+testIf('Mostrar el HTML del componente Material, con imagen.', () => {
   const mockedURL = 'https://santacc.es'
   const mockedMaterial = {
     pieza: {
@@ -57,7 +60,8 @@ it('Mostrar el HTML del componente Material, con imagen.', () => {
   )
   expect(wrapper).toMatchSnapshot()
 })
-it('Mostrar el HTML del componente Material, con vídeo Youtube.', () => {
+
+testIf('Mostrar el HTML del componente Material, con vídeo Youtube.', () => {
   const mockedURL = youtubeURL
   const mockedMaterial = {
     pieza: {
@@ -82,7 +86,8 @@ it('Mostrar el HTML del componente Material, con vídeo Youtube.', () => {
   )
   expect(wrapper).toMatchSnapshot()
 })
-it('Mostrar el HTML del componente Material, con vídeo Vimeo.', () => {
+
+testIf('Mostrar el HTML del componente Material, con vídeo Vimeo.', () => {
   const mockedURL = vimeoURL
   const mockedMaterial = {
     pieza: {
@@ -107,7 +112,8 @@ it('Mostrar el HTML del componente Material, con vídeo Vimeo.', () => {
   )
   expect(wrapper).toMatchSnapshot()
 })
-it('Mostrar el HTML del componente Material, con imagen, sin campaña, descripción ni tipo de pieza.', () => {
+
+testIf('Mostrar el HTML del componente Material, con imagen, sin campaña, descripción ni tipo de pieza.', () => {
   const mockedURL = 'https://santacc.es'
   const mockedMaterial = {
     pieza: {

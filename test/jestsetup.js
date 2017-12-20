@@ -7,3 +7,4 @@ global.render = render
 global.mount = mount
 
 global.graphql = graphql
+

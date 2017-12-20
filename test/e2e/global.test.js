@@ -82,11 +82,8 @@ function caught (err) {
 describe('Sección Global', () => {
   test('CSS coverage', async done => {
     expect.assertions(1)
-    await init(page, APP)
-      .then(unused => {
-        expect(unused).toBeGreaterThan(1)
-        done()
-      })
-      .catch(caught)
+    const unused = await init(page, APP).catch(caught)
+    expect(unused).toBeGreaterThan(1)
+    done()
   }, 30000)
 })

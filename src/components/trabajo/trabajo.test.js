@@ -6,7 +6,9 @@ import Adapter from 'enzyme-adapter-react-15'
 
 Enzyme.configure({ adapter: new Adapter() })
 
-it('Mostrar el HTML del componente', () => {
+const testIf = process.env.MODE && process.env.MODE === 'skipsnapshots' ? test.skip : test
+
+testIf('Mostrar el HTML del componente', () => {
   const mockedTrabajo = {
     cliente: 'Cliente',
     campana: 'Campaña',
@@ -19,7 +21,8 @@ it('Mostrar el HTML del componente', () => {
   )
   expect(wrapper).toMatchSnapshot()
 })
-it('Mostrar el HTML del componente, tipo de trabajo no vacío', () => {
+
+testIf('Mostrar el HTML del componente, tipo de trabajo no vacío', () => {
   const mockedTrabajo = {
     cliente: 'Cliente',
     campana: 'Campaña',

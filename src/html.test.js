@@ -5,13 +5,15 @@ import HTML from './html'
 import Adapter from 'enzyme-adapter-react-15'
 Enzyme.configure({ adapter: new Adapter() })
 
-it('Mostrar el HTML del componente', () => {
+const testIf = process.env.MODE && process.env.MODE === 'skipsnapshots' ? test.skip : test
+
+testIf('Mostrar el HTML del componente', () => {
   const wrapper = shallow(
     <HTML body="" headComponents={null} preBodyComponents={null} postBodyComponents={null} />
   )
   expect(wrapper).toMatchSnapshot()
 })
-it('Mostrar el HTML del componente, producción', () => {
+testIf('Mostrar el HTML del componente, producción', () => {
   const env = process.env.NODE_ENV
   process.env.NODE_ENV = 'production'
   const wrapper = shallow(
