@@ -18,7 +18,7 @@ function calcUsedLength (ruleUsage, stylesheet) {
 }
 
 async function init (page, url) {
-  return new Promise((resolve, reject) => {
+  return new Promise(async (resolve, reject) => {
     const client = page._client
     await client.send('Page.enable')
     await client.send('DOM.enable')
