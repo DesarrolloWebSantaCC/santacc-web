@@ -38,7 +38,7 @@ function caught (err) {
 describe('Sección La agencia', () => {
   test('[Snapshot] La agencia', async done => {
     expect.assertions(1)
-    const screenshot = await page.screenshot({ fullPage: true })
+    const screenshot = await page.screenshot({ fullPage: true }).catch(caught)
     expect(screenshot).toMatchImageSnapshot()
     done()
   }, 30000)

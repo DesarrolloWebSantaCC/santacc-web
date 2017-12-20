@@ -80,9 +80,9 @@ function caught (err) {
 }
 
 describe('Sección Global', () => {
-  test('CSS coverage', done => {
+  test('CSS coverage', async done => {
     expect.assertions(1)
-    init(page, APP)
+    await init(page, APP)
       .then(unused => {
         expect(unused).toBeGreaterThan(1)
         done()
