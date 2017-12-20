@@ -5,6 +5,7 @@ node_js:
 install:
   - npm install -g gatsby-cli@1.1.27
   - npm install
+  - gatsby develop
   - npm run test:snapshotclean
 script: bundle exec gatsby build
 cache:
