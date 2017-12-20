@@ -6,7 +6,7 @@ install:
   - npm install -g gatsby-cli@1.1.27
   - npm install
   - nohup gatsby develop & > /dev/null &
-  - while ! nc -z localhost 8000 </dev/null; do sleep 10; done
+  - while ! nc -z localhost 8000 </dev/null; do sleep 3; done
 script:
   - npm run test:snapshotclean
   - gatsby build

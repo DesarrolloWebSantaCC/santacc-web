@@ -10,6 +10,7 @@ const width = 1280
 const height = 980
 
 beforeAll(async () => {
+  window.jasmine.DEFAULT_TIMEOUT_INTERVAL = 15000;
   browser = await puppeteer.launch({
     /* headless: false, */
     /* slowMo: 80, */
