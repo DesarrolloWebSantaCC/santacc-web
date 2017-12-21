@@ -35,7 +35,7 @@ async function init (page, url) {
 
   //Trigger the user interaction with the page to hit more CSS rules
   //(in our case this means trigger clicking on each fo the tabs)
-  await page.goto(url)
+  // await page.goto(url)
   await page.click('nav li:first-child + li a')
   await page.click('nav li:first-child + li + li a')
 
@@ -80,7 +80,13 @@ function caught (err) {
 describe('Sección Global', () => {
   test('CSS coverage', async done => {
     expect.assertions(1)
-    const unused = await init(page, APP)
+    let unused
+    try {
+      unused = await init(page, APP)
+    } catch(e) {
+      caught(e)
+      return done()
+    }
     expect(unused).toBeGreaterThan(1)
     done()
   }, 30000)
