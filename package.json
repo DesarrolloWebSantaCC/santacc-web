@@ -55,6 +55,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
+    "test:coveragetravis": "env MODE=skipsnapshots SKIP=e2e jest --coverage",
     "test:coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "test:snapshotclean": "jest -u",
     "test:skipsnapshots": "env MODE=skipsnapshots jest",
