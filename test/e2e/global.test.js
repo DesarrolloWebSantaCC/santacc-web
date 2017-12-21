@@ -17,6 +17,11 @@ function calcUsedLength (ruleUsage, stylesheet) {
   return stylesheetRuleUsages.reduce((sum, x) => sum + x.endOffset - x.startOffset, 0)
 }
 
+let page
+let browser
+const width = 1280
+const height = 980
+
 async function init (page, url) {
   const client = page._client
   await client.send('Page.enable')
@@ -51,11 +56,6 @@ async function init (page, url) {
 
   return unusedCSS
 }
-
-let page
-let browser
-const width = 1280
-const height = 980
 
 beforeAll(async () => {
   window.jasmine.DEFAULT_TIMEOUT_INTERVAL = 15000;
