@@ -57,7 +57,7 @@ describe('Sección trabajos', () => {
       window.location.href
     )).catch(caught)).toBe('http://localhost:9000/trabajos/addalia')
     done()
-  }, 20000)
+  }, 30000)
   test('Carga más trabajos', async done => {
     expect.assertions(2)
     await page.goto(APP).catch(caught)
@@ -70,7 +70,7 @@ describe('Sección trabajos', () => {
       document.querySelectorAll('.trabajo').length
     )).catch(caught)).toBeGreaterThan(12)
     done()
-  }, 20000)
+  }, 30000)
   testIf('[Snapshot] trabajos', async done => {
     expect.assertions(1)
     await page.goto(APP).catch(caught)
