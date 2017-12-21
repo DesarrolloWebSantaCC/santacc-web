@@ -12,8 +12,8 @@ npm-debug.log
 nb-project
 /src/**/__snapshots__/*
 /test/**/__image_snapshots__/*
-coverage
+/coverage/*
+!/coverage/lcov.info
 config.js
 out.txt
 publish.txt
-coverage
