@@ -10,6 +10,7 @@ const width = 1280
 const height = 980
 
 const testIf = process.env.MODE && process.env.MODE === 'skipsnapshots' ? test.skip : test
+const testOn = process.env.SKIP && process.env.SKIP === 'e2e' ? test.skip : test
 
 beforeAll(async () => {
   window.jasmine.DEFAULT_TIMEOUT_INTERVAL = 15000;
@@ -38,7 +39,7 @@ function caught (err) {
 }
 
 describe('Sección trabajos', () => {
-  test('Se muestra el trabajo', async done => {
+  testOn('Se muestra el trabajo', async done => {
     expect.assertions(1)
     await page.waitForSelector('.trabajo:first-child .capa_trabajos').catch(caught)
     await page.hover('.trabajo:first-child .capa_trabajos').catch(caught)
@@ -48,7 +49,7 @@ describe('Sección trabajos', () => {
     )).catch(caught)).toBe('1')
     done()
   })
-  test('Navega al trabajo en menos de 600ms de hacer click', async done => {
+  testOn('Navega al trabajo en menos de 600ms de hacer click', async done => {
     expect.assertions(1)
     await page.waitForSelector('.trabajo:first-child').catch(caught)
     await page.click('.trabajo:first-child').catch(caught)
@@ -58,7 +59,7 @@ describe('Sección trabajos', () => {
     )).catch(caught)).toBe('http://localhost:9000/trabajos/addalia')
     done()
   }, 30000)
-  test('Carga más trabajos', async done => {
+  testOn('Carga más trabajos', async done => {
     expect.assertions(2)
     await page.goto(APP).catch(caught)
     await page.waitForSelector('.trabajo').catch(caught)

@@ -58,6 +58,7 @@
     "test:coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "test:snapshotclean": "jest -u",
     "test:skipsnapshots": "env MODE=skipsnapshots jest",
+    "test:skipsnapshotsande2e": "env MODE=skipsnapshots SKIP=e2e jest",
     "graphql": "gql-gen --url http://localhost:8000/___graphql --template typescript --out ./graphql-types.d.ts",
     "doc": "node doc"
   },

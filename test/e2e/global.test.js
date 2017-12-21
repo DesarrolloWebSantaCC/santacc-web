@@ -2,6 +2,8 @@ import puppeteer from 'puppeteer'
 
 const APP = 'http://localhost:9000/'
 
+const testOn = process.env.SKIP && process.env.SKIP === 'e2e' ? test.skip : test
+
 function calcUnusedCssPercentage (stylesheets, ruleUsage) {
   let usedLength = 0
   let totalLength = 0
@@ -82,7 +84,7 @@ function caught (err) {
 }
 
 describe('Sección Global', () => {
-  test('CSS coverage', async done => {
+  testOn('CSS coverage', async done => {
     expect.assertions(1)
     let unused
     try {
