@@ -40,7 +40,7 @@ async function init (page, url) {
 
   //Trigger the user interaction with the page to hit more CSS rules
   //(in our case this means trigger clicking on each fo the tabs)
-  // await page.goto(url)
+  await page.goto(url)
   await page.click('nav li:first-child + li a')
   await page.click('nav li:first-child + li + li a')
 
@@ -57,7 +57,7 @@ async function init (page, url) {
   return unusedCSS
 }
 
-beforeAll(async () => {
+beforeAll(async done => {
   window.jasmine.DEFAULT_TIMEOUT_INTERVAL = 15000;
   browser = await puppeteer.launch({
     /* headless: false, */
@@ -67,6 +67,7 @@ beforeAll(async () => {
   page = await browser.newPage()
   await page.setViewport({ width, height })
   await page.goto(APP)
+  done()
 })
 afterAll(() => {
   browser.close()
