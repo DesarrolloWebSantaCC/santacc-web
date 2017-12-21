@@ -65,6 +65,9 @@ beforeAll(async done => {
     args: [`--window-size=${width},${height}`]
   })
   page = await browser.newPage()
+  page.on('error', err => {
+    console.log('Puppeteer error', err)
+  })
   await page.setViewport({ width, height })
   await page.goto(APP)
   done()
@@ -75,7 +78,7 @@ afterAll(() => {
 
 function caught (err) {
   console.log('Caught err:')
-  console.log(err)
+  console.error(err)
 }
 
 describe('Sección Global', () => {
