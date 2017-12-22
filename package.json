@@ -56,7 +56,7 @@
     "test:watch": "jest --watch",
     "test:cypress": "cypress open",
     "test:coverage": "jest --coverage",
-    "test:coveragetravis": "env SKIP=e2e jest --coverage",
+    "test:coveragetravis": "env SKIP=e2e jest --coverage -u",
     "test:coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "test:snapshotclean": "jest -u",
     "test:skipsnapshots": "env MODE=skipsnapshots jest",

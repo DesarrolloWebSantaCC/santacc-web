@@ -3,7 +3,7 @@ language: node_js
 node_js:
   - "8"
 install:
-  - npm install -g gatsby-cli@1.1.27
+  - npm install -g gatsby-cli@1.1.28
   - npm install
   - gatsby build
   - nohup gatsby serve & > /dev/null &
@@ -15,6 +15,7 @@ after_success:
 cache:
   directories:
     - "node_modules"
+    - ".cache"
     - "src/fonts"
     - "src/images"
     - "src/components/boton-arriba/__snapshots__"

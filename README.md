@@ -7,6 +7,6 @@ Santa Compañía Creativa's website. Created with GatsbyJS from gatsby-starter-d
 
 **Installation**
 
-`>npm install -g gatsby-cli@1.1.27`
+`>npm install -g gatsby-cli@1.1.28`
 
 `>npm install`
