@@ -9,7 +9,7 @@ let browser
 const width = 1280
 const height = 980
 
-const testIf = process.env.MODE && process.env.MODE === 'skipsnapshots' ? test.skip : test
+const testIf = process.env.MODE && process.env.MODE === 'skipsnapshots' ? test.skip : process.env.SKIP && process.env.SKIP === 'e2e' ? test.skip : test
 
 beforeAll(async () => {
   window.jasmine.DEFAULT_TIMEOUT_INTERVAL = 15000;
