@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Santa Compañía Creativa`,
+    description: `Santa es una palabra llena de cosas buenas. No somos un grupo de publicistas de grandes agencias que, llegados a un punto de sus carreras, se unen para montárselo por su cuenta con las cuentas de esas grandes agencias.`,
     subtitle: ``,
     siteUrl: `https://santacc.es`
   },
