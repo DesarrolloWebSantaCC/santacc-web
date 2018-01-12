@@ -47,7 +47,7 @@ module.exports = class HTML extends React.Component {
         <head>
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-          <meta name="description" content="Santa es una palabra llena de cosas buenas. No somos un grupo de publicistas de grandes agencias que, llegados a un punto de sus carreras, se unen para montárselo por su cuenta con las cuentas de esas grandes agencias." />
+          <meta name="description" content="Santa es una palabra llena de cosas buenas. Una agencia de creatividad y contenidos donde confluye todos los días el talento de buena gente." />
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
