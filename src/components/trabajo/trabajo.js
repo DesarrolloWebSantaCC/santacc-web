@@ -85,7 +85,7 @@ const StyledTrabajo = styled.div`
   }
   .tipo_caracteristicas {
     font-style: italic;
-    font-size: 0.65rem;
+    font-size: 0.70rem;
     line-height: 1;
     color: #fff;
     font-family: oswald, Arial, Helvetica, sans-serif, sans;
