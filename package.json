@@ -41,7 +41,8 @@
     "react-google-maps": "^9.2.2",
     "react-helmet": "^5.2.0",
     "slash": "^1.0.0",
-    "styled-components": "^2.2.3"
+    "styled-components": "^2.2.3",
+    "snyk": "^1.85.0"
   },
   "keywords": [
     "gatsby"
@@ -63,7 +64,9 @@
     "test:skipsnapshotsande2e": "env MODE=skipsnapshots SKIP=e2e jest",
     "test:skipe2e": "env SKIP=e2e jest",
     "graphql": "gql-gen --url http://localhost:8000/___graphql --template typescript --out ./graphql-types.d.ts",
-    "doc": "node doc"
+    "doc": "node doc",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
@@ -105,5 +108,6 @@
       "js",
       "jsx"
     ]
-  }
+  },
+  "snyk": true
 }
