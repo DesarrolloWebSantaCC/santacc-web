@@ -13,7 +13,7 @@
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-react": "^7.4.0",
     "eslint-plugin-standard": "^3.0.1",
-    "gatsby": "^1.9.141",
+    "gatsby": "^2.0.0",
     "gatsby-image": "^1.0.30",
     "gatsby-link": "^1.6.32",
     "gatsby-module-loader": "^1.0.9",
