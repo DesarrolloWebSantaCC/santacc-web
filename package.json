@@ -29,7 +29,7 @@
     "gatsby-plugin-sitemap": "^1.2.5",
     "gatsby-plugin-styled-components": "^2.0.4",
     "gatsby-source-filesystem": "^1.5.11",
-    "gatsby-source-wordpress": "^2.0.42",
+    "gatsby-source-wordpress": "^4.0.8",
     "gatsby-transformer-documentationjs": "^1.4.8",
     "gatsby-transformer-sharp": "^1.6.16",
     "graphql-code-generator": "^0.8.14",
